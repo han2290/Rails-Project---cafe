@@ -1,0 +1,14 @@
+<% if @login_user.nil? %>
+    <p>현재 로그인된 유저가 없습니다.</p>
+    <%= link_to "로그인", "/sign_in" %>
+<% else %>
+    <p>현재 로그인된 유저: <%= @login_user.name %></p>
+    <%= link_to "로그아웃", "/logout"%>
+<% end %>
+
+<div>
+    <%@users.each do |user|%>
+        <%=link_to user.name, "/user/#{user.id}" %><br>
+    <%end%>
+</div>
+<%= link_to "회원가입", "/sign_up"%>

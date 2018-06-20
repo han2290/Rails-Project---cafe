@@ -1,0 +1,5 @@
+<%=form_tag("/cafes", method: "POST") do%>
+    <%=text_field_tag(:title)%>
+    <%=text_field_tag(:description)%>
+    <%=submit_tag("생성")%>
+<%end%>

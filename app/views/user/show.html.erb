@@ -1,0 +1,5 @@
+<h1><%= @user.name%></h1>
+최종 접속 아이피: <p><%=@user.ip_address%></p>
+
+<%= link_to "목록", "/users"%>
+<%= link_to "수정", "/user/#{@user.id}/edit"%>

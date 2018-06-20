@@ -1,0 +1,6 @@
+<ul>
+    <%@cafes.each do |cafe|%>
+        <li><%= link_to cafe.title, "/cafe/#{cafe.id}"%></li>
+    <%end%>
+</ul>
+<%= link_to "카페 생성", "/cafe/new"%>

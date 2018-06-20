@@ -1,0 +1,5 @@
+<h1><%=@cafe.title%></h1>
+<p><%=@cafe.description%></p>
+<%=link_to "목록", "/cafes"%>
+<%=link_to "수정", "/cafe/#{@cafe.id}/edit"%>
+<%=link_to "삭제", "/cafe/#{@cafe.id}", method: "delete"%>
