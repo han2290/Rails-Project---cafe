@@ -2,7 +2,7 @@ class UserController < ApplicationController
     
     def index
         @users = User.all
-        @login_user = User.find(session[:name]) if session[:name]
+        @current_user = User.find(session[:name]) if session[:name]
         
         
         

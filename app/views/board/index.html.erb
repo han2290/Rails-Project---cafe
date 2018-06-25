@@ -1,7 +1,15 @@
+
 <div>
-    <% @posts.each do |post| %>
-        <a href="/board/<%=post.id%>"><%=post.title%> </a>
-    <%end%>
+    <ul class="list-group">
+        <% @posts.each do |post| %>
+            <a class = "list-group-item" href="/board/<%=post.id%>"><%=post.title%> </a>
+        <%end%>
+    </ul>
+    
 </div>
+<hr>
 <%= link_to "새글쓰기", "/board/new"%>
+
+<%= render "ranking" ,title: @title%>
+<%= render "article" %>
     

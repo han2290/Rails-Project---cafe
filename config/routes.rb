@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :themes
     #board
     root 'board#index'
     get '/boards'           => 'board#index'    #전체목록
